@@ -10,7 +10,6 @@ html, body {
     user-select: none;
 }
 
-
 .scaler {
     width: 100vw;
     height: 100vh;
@@ -22,7 +21,6 @@ html, body {
 
 .landing {
     width: 90vw;
-    /* max-width: 1000px; */
     transform-origin: center;
     transition: transform 0.3s ease;
 }
