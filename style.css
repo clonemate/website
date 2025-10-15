@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+
+.scaler {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.landing {
+    width: 90vw;
+    /* max-width: 1000px; */
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .landing {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 700px) {
+  .landing {
+    transform: scale(1.25);
+  }
+}
+
+@media (max-width: 500px) {
+  .landing {
+    transform: scale(1.45);
+  }
+}
+
+.title-triangle-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+h3 {
+    position: relative;
+    transform: translateY(-10em); 
+    transform: translateX(43em); 
+    font-size: 1.5vw;
+    white-space: nowrap;
+}
+
+.triangle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.triangle-wrapper {
+    position: absolute;
+    left: calc(50% - 7.5vw);
+    top: 50%;
+    width: 15vw;
+    height: 15vw;
+}
+
+.triangle.one {
+    position: absolute;
+    left: -25%;
+    top: -32%;
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.triangle.two {
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.site-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 12vw;
+    margin: 0;
+    line-height: 1;
+    display: inline-block;
+}
+
+.slogan {
+    margin: 0;
+    font-size: 5.5vw;
+    transform: translateY(-0.4em); 
+    white-space: nowrap;
+    mix-blend-mode: difference; 
+}
+
+#links {
+    position: relative;
+    transform: translateY(-1em); 
+    text-align: center; 
+    z-index: 2; 
+    mix-blend-mode: difference; 
+    font-size: 1.5vw;
+    white-space: nowrap;
+}
+
+#links a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5vw;
+    width: 100%;
+    height: 0.1vw;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
